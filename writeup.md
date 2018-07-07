@@ -16,8 +16,8 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image0]: ./examples/grayscale.jpg "Grayscale"
-[image1]: ./Report materials/gray.png "Grayscale"
-[image2]: ./Report materials/blur.png "Gaussian blur"
+[image1]: ./Report_materials/gray.png "Grayscale"
+[image2]: ./Report_materials/blur.png "Gaussian blur"
 
 ---
 
