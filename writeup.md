@@ -18,6 +18,11 @@ The goals / steps of this project are the following:
 [image0]: ./examples/grayscale.jpg "Grayscale"
 [image1]: ./Report_materials/gray.png "Grayscale"
 [image2]: ./Report_materials/blur.png "Gaussian blur"
+[image3]: ./Report_materials/edges.png "Canny edge"
+[image4]: ./Report_materials/masked.png "Region of interest"
+[image5]: ./Report_materials/hough.png "Hough lines"
+[image6]: ./Report_materials/final.png "Final image"
+
 
 ---
 
@@ -45,14 +50,25 @@ to get a feeling what would work the best. Moving the low threshold to 75 didn't
 lines, but the background lines were cropped. From the tutorials it was suggested to keep the ratio in between
 1:2 and 1:3 so I tried the high threshold up to 225 and it started to crop out some of the lane lines so I used
 200 instead.
+
+![alt text][image3]
+
 5. Next up I masked the image to only get edges from the laneline regions and filter out everything else. As I 
 had printed out the image parameters earlier I knew the image dimensions and accordingly adjusted the 4 corners 
 of the region in interest.
+
+![alt text][image4]
+
 6. Afer that the edges were converted to line segments which should represent the lane lines on the road. To do so
 the hough lines algorithm was used. It took the edges from canny edges only from the region of interest and combined
 them to lane line segments. The parameter values were taken from the experimented values from the Computer Vision
 Fundamentals lesson and as they worked pretty much out of the box they were left unchanged.
+
+![alt text][image5]
+
 7. Finally, the found lines and original image were blended to get the final result
+
+![alt text][image6]
 
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by averaging all
