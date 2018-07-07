@@ -30,10 +30,15 @@ were tested I started to work on the end goal.
 
 1. Firstly I read in the image and print its parameters to know what I am working with.
 Example result: Image solidWhiteCurve.jpg is:  <class 'numpy.ndarray'>  with dimensions: 	 (540, 960, 3)
+
 2. Next, I convert it to grayscale
+
 ![alt text][image1]
+
 3. After that image is blurred with gaussian blur to filter out some noise
+
 ![alt text][image2]
+
 4. Then the edges of objects are found using function canny. For this function the thresholds were taken
 at first from the course tutorials (50 and 150) and they worked well. To fine tune them I changed one at a time
 to get a feeling what would work the best. Moving the low threshold to 75 didn't have any impact on the lane
