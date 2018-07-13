@@ -1,9 +1,4 @@
 # **Finding Lane Lines on the Road** 
-
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
-
 ---
 
 **Finding Lane Lines on the Road**
@@ -15,13 +10,13 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image0]: ./examples/grayscale.jpg "Grayscale"
 [image1]: ./Report_materials/gray.png "Grayscale"
 [image2]: ./Report_materials/blur.png "Gaussian blur"
 [image3]: ./Report_materials/edges.png "Canny edge"
 [image4]: ./Report_materials/masked.png "Region of interest"
 [image5]: ./Report_materials/hough.png "Hough lines"
 [image6]: ./Report_materials/final.png "Final image"
+[image7]: ./Report_materials/modified_lane_lines "Edited draw_lines function"
 
 
 ---
@@ -30,7 +25,7 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-At first there was a lot of trial and error to get the functions working on after another. After all the functions
+At first there was a lot of trial and error to get the functions working one after another. After all the functions
 were tested I started to work on the end goal.
 
 1. Firstly I read in the image and print its parameters to know what I am working with.
@@ -62,7 +57,7 @@ of the region in interest.
 6. Afer that the edges were converted to line segments which should represent the lane lines on the road. To do so
 the hough lines algorithm was used. It took the edges from canny edges only from the region of interest and combined
 them to lane line segments. The parameter values were taken from the experimented values from the Computer Vision
-Fundamentals lesson and as they worked pretty much out of the box they were left unchanged.
+Fundamentals lesson and were fine tuned a little bit as they didn't quite fit with these images.
 
 ![alt text][image5]
 
@@ -76,14 +71,11 @@ the lane line segments to get the general line to represent the lane car is in. 
 average left and right lane slope and bias and built the new line based on these parameters. The y min and max
 were selected so that the lane lines would be in the bottom of the image and in the middle of the image and based
 on these parameters the rest of the lane line parameters were deducted so the left and right lane lines could be 
-drawn. In order to make the algorithm work a bit bitter after the intial pipeline was working I printed out the 
+drawn. In order to make the algorithm work a bit better after the intial pipeline was working I printed out the 
 slopes of lines in order to see what is the magnitude of the lines and added voter in the range of 0.5 and 0.9 so
 if the slope is in this range the parameters of the line are added to slope and bias arrays.
 
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
-![alt text][image0]
-
+![alt text][image7]
 
 ### 2. Identify potential shortcomings with your current pipeline
 
