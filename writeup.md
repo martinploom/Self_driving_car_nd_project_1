@@ -16,7 +16,7 @@ The goals / steps of this project are the following:
 [image4]: ./Report_materials/masked.png "Region of interest"
 [image5]: ./Report_materials/hough.png "Hough lines"
 [image6]: ./Report_materials/final.png "Final image"
-[image7]: ./Report_materials/modified_lane_lines "Edited draw_lines function"
+[image7]: ./Report_materials/modified_lane_lines.png "Edited draw_lines function"
 
 
 ---
